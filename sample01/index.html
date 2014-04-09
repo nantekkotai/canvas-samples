@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas-sample01</title>
+</head>
+<body>
+
+<canvas id="canvasBoard" width="500" height="500"></canvas>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+$(function () {
+	var canvas = document.getElementById('canvasBoard'),
+	    ctx = canvas.getContext('2d');
+	for (var p = 0; p < 450; p++) {
+		ctx.fillStyle = "rgb(0,0,255)";
+		ctx.fillRect(p, p, 50, 50);
+	}
+});
+</script>
+</body>
+</html>
