@@ -12,11 +12,17 @@
 <script>
 $(function () {
 	var canvas = document.getElementById('canvasBoard'),
-	    ctx = canvas.getContext('2d');
-	for (var p = 0; p < 450; p++) {
+	    ctx = canvas.getContext('2d'),
+	    p = 0;
+
+	setInterval(function () {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		if (p++ > 450) {
+			p = 0;
+		}
 		ctx.fillStyle = "rgb(0,0,255)";
 		ctx.fillRect(p, p, 50, 50);
-	}
+	}, 5);
 });
 </script>
 </body>
